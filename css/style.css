@@ -368,7 +368,17 @@ text-align: center; }
 }
 /* animacion botonera*/
 
-
+.box-in-izq button:hover{
+	cursor: pointer;
+	background-color: rgb(32, 32, 32);
+	color: white;
+	transform: scale(0.97);
+	transition: 0.5s;
+}
+.box-out-der img:hover{
+	transform: scale(0.98);
+	transition: 0.5s;
+}
 
 /* formulario de contacto */
 .container-form{
@@ -488,3 +498,42 @@ text-align: center; }
 
 /* ANIMACION TEMPORAL */
 
+.container-cuadrado{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	height: 800px;
+	flex-wrap: wrap;
+}
+.cuadrado{
+	display: flex;
+	width: 200px;
+	height: 200px;
+	background-color: rebeccapurple;
+	animation-name: animacion;
+	animation-duration: 4s;
+	position: relative;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	margin: 5px;
+	align-items: center;
+	justify-content: center;
+}
+.cuadrado p{
+	font-size: 14rem;
+	text-decoration: none;
+	padding: 5px;
+	color: rgb(61, 30, 0);
+	font-family: 'PT Serif', serif;
+}
+
+@keyframes animacion {
+	0% {background-color: red; left: 0; top: 0px;}
+	25% {background-color: lightblue; left: 300px;top: 0px;}
+	50% {background-color: salmon; left: 300px; top: 300px;}
+	75% {background-color: aquamarine; left: 0px;top: 300px;}
+	100% { background-color: darkorange;left: 0px;top: 0px;}
+}
+.fix{
+	height: 800px;
+}
